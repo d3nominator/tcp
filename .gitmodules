@@ -1,3 +1,6 @@
 [submodule "dependencies"]
 	path = dependencies
 	url = https://github.com/LaKabane/libtuntap
+[submodule "dependencies/libviface"]
+	path = dependencies/libviface
+	url = https://github.com/HPENetworking/libviface
