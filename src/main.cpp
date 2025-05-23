@@ -2,21 +2,25 @@
 #include <bits/stdc++.h>
 #include "tuntap++.hh"
 #include "tins/stp.h"
+#include "tins/tins.h"
+
+using namespace Tins;
+using namespace std;
+
+bool
+callback(const PDU &pdu) {
+    // Find the IP layer
+    const IP &ip = pdu.rfind_pdu<IP>();
+    // Find the TCP layer
+    const TCP &tcp = pdu.rfind_pdu<TCP>();
+    cout << ip.src_addr() << ':' << tcp.sport() << " -> "
+         << ip.dst_addr() << ':' << tcp.dport() << endl;
+    return true;
+}
 
 int
 main(){
-    try {
-        // Create a TUN interface (layer 3)
-        tuntap::tuntap tun(TUNTAP_MODE_TUNNEL, 0);
-        const std::string tun_name = "tun0";
-        tun.name(tun_name);
-        tun.mtu(1400);
-        tun.ip("192.168.0.10", 24);
-        tun.up();
-    } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return 1;
-    }
+    Sniffer("wlp0s20f3").sniff_loop(callback);
 
     return 0;
 }
