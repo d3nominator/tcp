@@ -50,7 +50,8 @@ ConnectionIdentifier{
     }
 }
 
-const uint32_t DEFAULT_WINDOW_SIZE = 65535;
+const uint32_t
+DEFAULT_WINDOW_SIZE = 65535;
 
 }
 
