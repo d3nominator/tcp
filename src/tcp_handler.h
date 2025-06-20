@@ -8,7 +8,7 @@
 #include <condition_variable>
 #include <queue>
 
-namespace MyTPC{
+namespace MyTCP{
 
 class TCPHandler{
     public:
