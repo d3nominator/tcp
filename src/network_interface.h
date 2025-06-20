@@ -6,7 +6,7 @@
 #include <memory>
 #include <functional> // for std::function
 #include <tins/tins.h>
-#include <tuntap/tun.hh>
+#include <tuntap/tun.h>
 
 namespace MyTCP{
 
