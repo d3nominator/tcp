@@ -8,7 +8,7 @@
 #include <condition_variable>
 #include <queue>
 
-namespace MyTCP{
+namespace SimpleTCP{
 
 class TCPHandler{
     public:
@@ -51,7 +51,6 @@ class TCPHandler{
 
 
         TCPState current_state_ = TCPState::CLOSED;
-
 
         //sequence numbers
         uint32_t isn_ = 0;

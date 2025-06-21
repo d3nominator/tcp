@@ -328,31 +328,6 @@ void SimpleTCPHandler::handle_data(const Tins::TCP& tcp_segment) {
         }
         send_tcp_segment(Tins::TCP::ACK);
     }
-}#include <iostream>
-#include "network_interface.h"
-#include "tcp_handler.h"
-#include "tuntap++.hh"
-#include "tins/stp.h"
-#include "tins/tins.h"
-#include <chrono>
-#include <thread>
-#include <net/if.h>
-#include <string>
-#include <cstring>
-#include <unistd.h>
-#include <sys/ioctl.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <net/if.h>
-#include <net/if_arp.h>
-
-
-
-
-int main()
-{
-   
 }
 
 } // namespace SimpleTCP

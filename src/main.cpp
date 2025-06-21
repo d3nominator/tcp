@@ -9,9 +9,9 @@
 #include <net/if.h>
 
 
-MyTCP::NetworkInterface net_if("simpletcp");
-MyTCP::TCPHandler* server_handler_ptr = nullptr;
-MyTCP::TCPHandler* client_handler_ptr = nullptr;
+SimpleTCP::NetworkInterface net_if("simpletcp");
+SimpleTCP::TCPHandler* server_handler_ptr = nullptr;
+SimpleTCP::TCPHandler* client_handler_ptr = nullptr;
 
 // Global callback for NetworkInterface
 void packet_demux(const std::vector<uint8_t>& raw_packet) {
