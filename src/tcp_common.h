@@ -6,7 +6,7 @@
 #include <tins/tins.h>
 
 
-namespace MyTCP {
+namespace SimpleTCP {
 
 enum class
 TCPState{

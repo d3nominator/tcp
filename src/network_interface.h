@@ -6,9 +6,9 @@
 #include <memory>
 #include <functional> // for std::function
 #include <tins/tins.h>
-#include <tuntap/tun.h>
+#include <tuntap/tun.hh>
 
-namespace MyTCP{
+namespace SimpleTCP{
 
 class
 NetworkInterface{
